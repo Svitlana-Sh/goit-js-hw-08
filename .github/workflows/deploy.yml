@@ -19,7 +19,8 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
+          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: dist
+
 
