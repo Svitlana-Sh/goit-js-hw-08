@@ -2,7 +2,7 @@
 import { galleryItems } from './gallery-items';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-// Change code below this linenpi
+// Change code below this line
 
 console.log(galleryItems);
 
@@ -14,7 +14,7 @@ function createItemsMarkup(item) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `<div class="gallery__item">
-      <a class="gallery__link" href="${original.value}">
+      <a class="gallery__link" href="${original}">
         <img
           class="gallery__image"
           src="${preview}"
@@ -28,8 +28,7 @@ function createItemsMarkup(item) {
 }
 
 const lightbox = new SimpleLightbox('.gallery a', {
+  captions: true,
   captionsData: 'alt',
-  captionPosition: 'bottom',
   captionDelay: 250,
-  animationSlide: true,
 });
